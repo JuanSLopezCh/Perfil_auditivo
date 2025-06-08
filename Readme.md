@@ -8,7 +8,7 @@
 - [x] Descargar datos
 - [x] Consolidar datos
 - [x] Limpiar datos (remover duplicados)
-- [ ] Crear base de datos de marcas
+- [x] Crear base de datos de marcas
 - [ ] Obtener información adicional de referencias (link, imagen, precio, calificación de usuarios)
 - [ ] Crear modelo de datos
 - [ ] Elaborar mockup (colores, fuentes, esquema visual)
@@ -53,6 +53,10 @@ Para construir un modelo de datos más completo, utilizando el archivo `Marcas.c
 - Enfoque de la marca (Audiophile, usuario estándar, profesional, etc.)
 - País de origen
 - Página web oficial
+
+Se hace luego una limpieza manual de las marcas cuyas paginas web no retornaban ninguna información para finalmente eliminar las marcas que ya no existen y sus audifonos relacionados.
+
+Se descargan Los logos de las marcas.
 
 ---
 
