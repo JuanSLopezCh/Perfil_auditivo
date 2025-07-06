@@ -9,8 +9,9 @@
 - [x] Consolidar datos
 - [x] Limpiar datos (remover duplicados)
 - [x] Crear base de datos de marcas
-- [ ] Obtener información adicional de referencias (link, imagen, precio, calificación de usuarios)
-- [ ] Crear modelo de datos
+- [x] Obtener información adicional de referencias (link, imagen, precio, calificación de usuarios)
+- [ ] Crear modelo de datos (Explode de Audifonos)
+- [ ] Modelo ML para identificar curvas mas similares a Harman
 - [ ] Elaborar mockup (colores, fuentes, esquema visual)
 - [ ] Desarrollar el dashboard
 
@@ -58,11 +59,9 @@ Se hace luego una limpieza manual de las marcas cuyas paginas web no retornaban 
 
 Se descargan Los logos de las marcas.
 
----
+## Paso 4: Se realiza un explode de los audifonos
 
-## 💡 Ideas
-
-- Descargar el logo de cada marca para incluirlo en el dashboard.
+Para poder tener un archivo funcional, se dedebn nuevamente contar con dos archivos separados, uno de referencias unicas y uno donde están las frecuencias y respuestas para cada uno.
 
 ---
 
