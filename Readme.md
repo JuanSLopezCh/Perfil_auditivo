@@ -9,7 +9,7 @@
 - [x] Consolidar datos  
 - [x] Limpiar datos (remover duplicados)  
 - [x] Crear base de datos de marcas  
-- [] Obtener información adicional de referencias (link, imagen, precio, calificación de usuarios)  
+- [ ] Obtener información adicional de referencias (link, imagen, precio, calificación de usuarios)  
 - [x] Crear modelo de datos (Explode de Audífonos)  
 - [x] Medida para identificar curvas más similares a Harman  
 - [ ] Elaborar mockup (colores, fuentes, esquema visual)  
