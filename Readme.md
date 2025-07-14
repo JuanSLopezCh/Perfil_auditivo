@@ -82,6 +82,15 @@ Este índice será clave para las fases de clusterización y visualización fina
 
 ---
 
+## Paso 6: Construcción de Curvas Proxy por Género Musical y Uso
+
+Para complementar el análisis basado en la curva Harman, se construyeron curvas "proxy" representativas para diferentes géneros musicales y tipos de contenido, como Electrónica, Clásica, Hip-Hop, Rock, Gaming, Podcast, Reguetón, Trap, entre otros.
+
+El proceso consistió en definir manualmente un conjunto de puntos clave de frecuencia (por ejemplo: 20 Hz, 60 Hz, 1 kHz, 10 kHz) junto con valores estimados de ganancia en decibeles (dB) que reflejan el perfil tonal típico de cada género. Estas definiciones se basaron en múltiples fuentes de referencia: artículos técnicos, recomendaciones de ecualización comunitarias y análisis auditivos documentados.
+
+A partir de esos puntos, se generaron curvas completas de 695 valores usando interpolación lineal (`scipy.interpolate.interp1d`), alineadas exactamente con la resolución de frecuencia del dataset original. Esto permite comparar cualquier audífono contra cada curva proxy de forma precisa, calculando métricas como similitud o error medio, para identificar qué modelos son más aptos para cada tipo de contenido.  
+Este conjunto de curvas ampliadas será clave para enriquecer la recomendación en el dashboard final.
+
 
 ## 📝 Necesidades
 
