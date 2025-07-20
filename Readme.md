@@ -91,6 +91,36 @@ El proceso consistió en definir manualmente un conjunto de puntos clave de frec
 A partir de esos puntos, se generaron curvas completas de 695 valores usando interpolación lineal (`scipy.interpolate.interp1d`), alineadas exactamente con la resolución de frecuencia del dataset original. Esto permite comparar cualquier audífono contra cada curva proxy de forma precisa, calculando métricas como similitud o error medio, para identificar qué modelos son más aptos para cada tipo de contenido.  
 Este conjunto de curvas ampliadas será clave para enriquecer la recomendación en el dashboard final.
 
+---
+
+## Paso 7: Preparación de Datos para el Web Scraping
+
+Como parte del análisis del perfil auditivo, se incorporarán variables complementarias a las técnicas ya consideradas, incluyendo el **precio**, la **calificación promedio de usuarios**, la **imagen principal del producto** y los **enlaces comerciales** desde plataformas como **Amazon** y **AliExpress**.
+
+Actualmente se cuenta con un total de **1.169 referencias únicas de audífonos**, las cuales fueron segmentadas en **12 archivos `.csv`** mediante un script en Python. Cada archivo agrupa un subconjunto de 100 audífonos, lo cual facilita tanto el proceso de búsqueda como el almacenamiento y posterior integración de los datos recolectados.
+
+El objetivo de este paso es obtener y almacenar las siguientes variables por cada referencia:
+
+- Indicador de disponibilidad (flag) en Amazon y AliExpress  
+- URL directa al producto (por plataforma)  
+- Imagen principal del producto  
+- Precio estimado en USD  
+- Calificación promedio de usuarios (estrellas)  
+
+Esta información se integrará posteriormente en los modelos de **clusterización** (como K-Means), permitiendo segmentar los audífonos no solo por su respuesta en frecuencia, sino también por criterios de mercado y percepción del usuario.
+
+---
+
+### Pasos siguientes
+
+Actualmente se están evaluando diferentes metodologías para realizar el scraping de forma eficiente y respetando las políticas de uso de cada plataforma. Entre las opciones consideradas se encuentran:
+
+- **Scripts en Python** utilizando librerías como `Selenium` o `BeautifulSoup`, que permiten mayor control pero implican una ejecución más manual.  
+- **Herramientas no-code** como **Octoparse**, que podrían acelerar el proceso con menor esfuerzo técnico, especialmente útil para lotes grandes.
+
+Una vez recolectada y validada la información, se aplicarán técnicas de **clusterización avanzada** y se implementará una infraestructura de datos en **Databricks**, con el fin de contar con un **data warehouse robusto y escalable**. Este repositorio será consumido desde **Power BI**, donde se construirá la interfaz visual del usuario final.
+
+
 
 ## 📝 Necesidades
 
